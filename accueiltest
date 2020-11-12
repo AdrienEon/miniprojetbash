@@ -1,0 +1,47 @@
+#!/bin/bash
+clear
+cat explication.txt
+echo
+read reponse
+while [ $reponse == "1" ] || [ $reponse == "2" ] || [ $reponse == "3" ] || [ $reponse == "4" ] || [ $reponse == "5" ]
+	do 
+		if [ "$reponse" == "1" ]
+		then
+		clear
+		echo "Vous entrez dans le bonheur de la configuration PC"
+		sleep 2
+		./LeJeu.sh 
+		fi	
+
+		if [ "$reponse" == "2" ]
+		then
+		clear
+		echo "Vous allez choisir votre kit évolution"
+		sleep 2
+		./evolution.sh
+		fi
+
+		if [ "$reponse" == "3" ]
+		then
+		echo "Vous allez choisir votre PC prebuild"
+		sleep 2
+		./prebuild.sh
+		fi
+
+		if [ "$reponse" == "4" ]
+		then
+		echo "Vous allez choisir votre PC portable"
+		sleep 2
+		./laptop.sh
+		fi
+	
+		if [ "$reponse" == "5" ]
+		then
+		clear
+		echo "Le programme se ferme"
+		sleep 2
+		exit  
+		fi
+	else 
+		echo "Vous devez choisir entre l'option 1, 2, 3,4 et 5"
+done 
