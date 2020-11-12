@@ -1,0 +1,43 @@
+#!/bin/bash
+clear
+cat explication.txt
+echo
+read reponse
+	
+	if [ "$reponse" == "1" ]
+	then
+	clear
+	echo "Vous entrez dans le bonheur de la configuration PC"
+	sleep 2
+	./choixcpu.sh 
+	fi	
+
+	if [ "$reponse" == "2" ]
+	then
+	clear
+	echo "Vous allez choisir votre kit évolution"
+	sleep 2
+	./evolution.sh
+	fi
+
+	if [ "$reponse" == "3" ]
+	then
+	echo "Vous allez choisir votre PC prebuild"
+	sleep 2
+	./prebuild.sh
+	fi
+
+	if [ "$reponse" == "4" ]
+	then
+	echo "Vous allez choisir votre PC portable"
+	sleep 2
+	./laptop.sh
+	fi
+	
+	if [ "$reponse" == "5" ]
+	then
+	clear
+	echo "Le programme se ferme"
+	sleep 2
+	exit  
+	fi 
